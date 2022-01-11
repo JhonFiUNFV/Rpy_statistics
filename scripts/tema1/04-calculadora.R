@@ -241,3 +241,9 @@ z2
 Mod(z2)
 Arg(z2)
 pi/2
+
+## EJERCICIOS
+
+log(16,4)
+exp(1)
+
