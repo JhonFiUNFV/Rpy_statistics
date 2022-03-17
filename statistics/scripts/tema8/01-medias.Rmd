@@ -10,6 +10,8 @@ output: html_document
 ```{r}
 x = c(32, 45, 67, 43, 28, 17, 48, 95)
 n = length(x)
+y = sample(1:20,450,replace=T) 
+n1 = length(y)
 ```
 
 Vamos a calcular las medias del vector `r x` que está formado por `r n` observaciones.
@@ -20,6 +22,7 @@ $$\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i$$.
 
 ```{r}
 sum(x)/n # mean
+sum(y)/n1
 ```
 
 
@@ -29,7 +32,9 @@ $$\bar{x}_w = \frac{\sum_{i=1}^nw_i\cdot x_i}{\sum_{i=1}^n w_i}$$
 
 ```{r}
 w = c(1, 2, 2, 3, 3, 2, 2, 1)
+z = sample(1:20,450,replace=T) 
 sum(w*x)/sum(w)
+sum(z*y)/sum(z)
 ```
 
 
@@ -40,6 +45,8 @@ $$\bar{x}_G = \left(\prod_{i=1}^n x_i\right)^{1/n}$$
 ```{r}
 prod(x)^(1/n)
 prod(x^(1/n))
+prod(y)^(1/n1)
+prod(y^(1/n1))
 ```
 
 ## Media armónica
@@ -48,6 +55,7 @@ $$\bar{x}_A = \frac{n}{\sum_{i=1}^{n}\frac{1}{x_i}}$$
 
 ```{r}
 n/sum(1/x)
+n1/sum(1/y)
 ```
 
 ## Mínimo y máximo
@@ -55,5 +63,7 @@ n/sum(1/x)
 ```{r}
 min(x)
 max(x)
+min(y)
+max(y)
 ```
 
