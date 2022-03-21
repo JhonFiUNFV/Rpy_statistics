@@ -13,8 +13,8 @@ knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
 
 ### Carga de datos
 ```{python}
-from ggplot import mtcars
-data = mtcars
+import statsmodels.api as sm
+data = sm.datasets.get_rdataset("mtcars", "datasets", cache=True).data
 data.index = data["name"]
 print(data.head())
 ```

@@ -2,7 +2,9 @@
 title: "Distribución de Bernoulli"
 author: "Curso de Estadística Descriptiva"
 date: "21/1/2019"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
